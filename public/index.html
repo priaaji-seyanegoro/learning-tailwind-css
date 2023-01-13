@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
     <h1 class="text-center text-xl m-4">Mari Belajar Tailwind CSS</h1>
     <div
       class="max-w-xl bg-[#bada55] h-96 mx-auto overflow-y-scroll bg-fixed bg-fit"
@@ -42,9 +42,25 @@
 
     <hr class="my-4" />
 
+    <div class="flex justify-center m-5">
+      <span class="text-sm text-slate-500 mr-2">Light</span>
+      <input id="toggle" type="checkbox" hidden />
+      <label for="toggle">
+        <div
+          class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <div
+            id="toggle_circle"
+            class="w-4 h-4 bg-slate-200 rounded-full"
+          ></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
     <!-- psudo class  -->
     <button
-      class="block mx-auto bg-sky-500 px-5 py-2 rounded-xl text-white shadow-lg hover:bg-sky-600 active:bg-sky-700 font-semibold"
+      class="block mx-auto bg-sky-500 px-5 py-2 rounded-xl text-white shadow-lg hover:bg-sky-600 active:bg-sky-700 font-semibold dark:bg-slate-700 dark:hover:bg-slate-900"
     >
       Simpan
     </button>
@@ -53,7 +69,7 @@
     https://tailwindcss.com/docs/hover-focus-and-other-states#form-states -->
 
     <div
-      class="max-w-lg border border-slate-200 shadow-lg my-10 mx-auto p-4 rounded hover:bg-sky-600 group/card selection:bg-lime-300 selection:text-slate-900 rounded"
+      class="max-w-lg border border-slate-200 shadow-lg my-10 mx-auto p-4 rounded hover:bg-sky-600 group/card selection:bg-lime-300 selection:text-slate-900"
     >
       <h5
         class="font-semibold text-lg mb-2 text-slate-700 group-hover/card:text-white"
@@ -69,6 +85,42 @@
         rerum, inventore minima nihil consectetur alias?
       </p>
     </div>
+
+    <!-- styling based sibling 
+    https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-sibling-state -->
+    <div class="max-w-lg border border-slate-200 p-5 rounded shadow-lg mx-auto">
+      <label for="email">
+        <span
+          class="text-slate-800 after:content-['*'] after:text-pink-700 after:ml-0.5 font-semibold"
+          >Email</span
+        >
+        <input
+          id="email"
+          type="email"
+          placeholder="Masukan Email Anda"
+          class="block border w-full p-2 mt-2 rounded outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+        />
+        <p class="text-pink-600 text-sm m-1 invisible peer-invalid:visible">
+          Email Tidak Valid
+        </p>
+      </label>
+    </div>
+
+    <script>
+      const toggle_circle = document.querySelector("#toggle_circle");
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", () => {
+        if (checkbox.checked) {
+          toggle_circle.classList.add("translate-x-3");
+          html.classList.add("dark");
+        } else {
+          toggle_circle.classList.remove("translate-x-3");
+          html.classList.remove("dark");
+        }
+      });
+    </script>
 
     <div class="m-[200px]"></div>
   </body>
