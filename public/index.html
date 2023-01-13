@@ -5,17 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coba Tailwind</title>
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1 class="text-5xl font-bold text-blue-700">Hello Pria Aji Sn</h1>
+    <h1 class="text-center text-xl m-4">Mari Belajar Tailwind CSS</h1>
+    <div
+      class="max-w-xl bg-[#bada55] h-96 mx-auto overflow-y-scroll bg-fixed bg-fit"
+      style="background-image: url('../img/1.jpg')"
+    >
+      <p class="text-2xl p-5">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit
+        voluptatum explicabo sequi aperiam eveniet perspiciatis dolorum nam,
+        neque assumenda deserunt iusto unde, error quibusdam! Nisi qui
+        temporibus maxime asperiores porro vero suscipit blanditiis et libero
+        aspernatur necessitatibus, odit officia vel sed accusantium laudantium
+        aliquam, fugiat quaerat doloremque voluptates alias! Doloremque tempora
+        nobis esse ut voluptate, ratione ipsum eius reprehenderit dolore
+        pariatur repudiandae reiciendis maiores magnam dolorem facere quam
+        corrupti! Porro, pariatur? Possimus in quis rem consequuntur laboriosam
+        debitis tempore quam corporis eligendi libero, autem optio expedita,
+        voluptate natus enim ea sapiente at dolore facilis repellat modi
+        assumenda ad dolorem quia? Neque eius et ipsa, voluptas qui magni, eaque
+        consequuntur nam harum consequatur error ut facilis, fuga inventore?
+        Cupiditate molestiae voluptatum quisquam eaque, quae dolor? Sapiente
+        repellat beatae libero doloribus recusandae nostrum, rem nihil dolores.
+        Quaerat, facere commodi veniam amet earum, fugit deserunt assumenda
+        voluptas velit dolores maxime reiciendis, nisi quas! Vero omnis quia ex,
+        voluptatibus error reiciendis facere labore ea ipsum corporis minima
+        deserunt voluptatum, vitae architecto. Dolores possimus tenetur debitis
+        voluptate enim nam, laborum ratione explicabo cum ullam in? Labore aut
+        voluptas amet voluptatem eum asperiores ab, ducimus reprehenderit quos
+        rerum soluta fuga accusantium, nam odio doloremque animi sapiente!
+      </p>
+    </div>
 
-    <p class="mx-10 bg-zinc-300">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, blanditiis
-      itaque magnam odio, dignissimos vitae nulla aperiam consectetur nisi quod
-      quo doloribus modi temporibus sed veritatis assumenda libero saepe non
-      illo eligendi adipisci vero numquam? Sit debitis fugit ab! Aut enim eius
-      id beatae fugit ea porro! Aut, deserunt suscipit.
-    </p>
+    <hr class="my-4" />
+
+    <!-- psudo class  -->
+    <button
+      class="block mx-auto bg-sky-500 px-5 py-2 rounded-xl text-white shadow-lg hover:bg-sky-600 active:bg-sky-700 font-semibold"
+    >
+      Simpan
+    </button>
+
+    <!-- styling based parent 
+    https://tailwindcss.com/docs/hover-focus-and-other-states#form-states -->
+
+    <div
+      class="max-w-lg border border-slate-200 shadow-lg my-10 mx-auto p-4 rounded hover:bg-sky-600 group/card selection:bg-lime-300 selection:text-slate-900 rounded"
+    >
+      <h5
+        class="font-semibold text-lg mb-2 text-slate-700 group-hover/card:text-white"
+      >
+        My Card
+      </h5>
+      <p
+        class="text-slate-600 group-hover/card:text-white text-justify first-line:uppercase first-letter:text-8xl first-letter:float-left first-letter:mr-2"
+      >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+        deserunt modi laboriosam voluptates perferendis magnam exercitationem
+        perspiciatis doloremque cumque libero quis numquam voluptate, temporibus
+        rerum, inventore minima nihil consectetur alias?
+      </p>
+    </div>
+
+    <div class="m-[200px]"></div>
   </body>
 </html>
